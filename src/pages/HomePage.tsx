@@ -21,9 +21,8 @@ const HomePage: React.FC = () => {
             
           </p>
         </div>
-
         {/* Access Sections */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="flex justify-center">
           {/* User Section */}
           <div
             onClick={() => navigate('/user')}
@@ -39,30 +38,8 @@ const HomePage: React.FC = () => {
               </div>
               <h3 className="text-xl font-semibold text-gray-800 mb-3">User </h3>
               <p className="text-gray-600 mb-6">
-                Access your personal notes, create new ones, and manage your account.
+                Access your personal notes
               </p>
-
-            </div>
-          </div>
-
-          {/* Admin Section */}
-          <div
-            onClick={() => navigate('/admin')}
-            className="group bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-2 focus:outline-none focus:ring-2 focus:ring-purple-500"
-            tabIndex={0}
-            role="button"
-            aria-label="Admin Access"
-            onKeyDown={(e) => e.key === 'Enter' && navigate('/admin')}
-          >
-            <div className="text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-3">Admin </h3>
-              <p className="text-gray-600 mb-6">
-                Manage users, oversee all notes, and maintain system administration.
-              </p>
-              
             </div>
           </div>
         </div>
