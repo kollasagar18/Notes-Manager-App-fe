@@ -10,8 +10,6 @@ import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import ResetOtpPage from './pages/ResetOtpPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
 import UserNotesPage from './pages/UserNotesPage';
-import AdminLoginPage from './pages/AdminLoginPage';
-import AdminDashboardPage from './pages/AdminDashboardPage';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Protected Route Components
@@ -68,15 +66,7 @@ function App() {
               </ProtectedUserRoute>
             } />
             
-            {/* Admin Routes */}
-            <Route path="/admin" element={<AdminLoginPage />} />
             
-            {/* Protected Admin Routes */}
-            <Route path="/admin/dashboard" element={
-              <ProtectedAdminRoute>
-                <AdminDashboardPage />
-              </ProtectedAdminRoute>
-            } />
             
             {/* Catch all route */}
             <Route path="*" element={<Navigate to="/" replace />} />
