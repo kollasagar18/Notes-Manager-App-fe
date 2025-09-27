@@ -1,10 +1,17 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+// ================== Dynamic Base URL ==================
+const API_BASE_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://notes-manager-app-be.onrender.com/api'
+    : 'http://localhost:5000/api';
 
+// ================== Common Response Type ==================
 export interface ApiResponse<T = any> {
   success: boolean;
   message: string;
   data?: T;
 }
+
+// ================== Api Service Class ==================
 
 class ApiService {
   private async request<T>(

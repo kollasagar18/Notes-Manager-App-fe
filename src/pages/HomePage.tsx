@@ -21,7 +21,6 @@ const HomePage: React.FC = () => {
             
           </p>
         </div>
-
         {/* Access Sections */}
         <div className="flex justify-center">
           {/* User Section */}
@@ -41,7 +40,6 @@ const HomePage: React.FC = () => {
               <p className="text-gray-600 mb-6">
                 Access your personal notes
               </p>
-
             </div>
           </div>
         </div>
